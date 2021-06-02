@@ -155,19 +155,19 @@ def drawAnnotations(image, predictions, ax=None):
             xy[1] = 1 - xy[1]
             ax.annotate(s=text,
                         xy=xy,
-                        xytext=(-0.05 if side == 'left' else 1.05, y),
+                        xytext=(-0.01 if side == 'left' else 1.01, y),
                         xycoords='axes fraction',
                         arrowprops={
                             'arrowstyle': '->',
                             'color': 'r'
                         },
                         color='r',
-                        fontsize=14,
+                        fontsize=28,
                         horizontalalignment='right' if side == 'left' else 'left')
     return ax
 
 
-def drawBoxes(image, boxes, color=(255, 0, 0), thickness=5, boxes_format='boxes'):
+def drawBoxes(image, boxes, color=(255, 0, 0), thickness=1, boxes_format='boxes'):
     """Draw boxes onto an image.
 
     Args:
